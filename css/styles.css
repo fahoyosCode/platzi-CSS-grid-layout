@@ -42,7 +42,7 @@ body {
   display: grid;
   grid-template: 60px 1fr 150px / 90px 1fr;
   /* grid-gap: 10px; */
-  height: 100vh;
+  height: auto;
   grid-template-areas:
     "header header"
     "left contenido"
@@ -68,6 +68,7 @@ body {
   font-size: 30px;
   font-weight: bold;
   margin: 0;
+  color: #fe6665;
 }
 .search-bar {
   display: flex;
@@ -85,30 +86,57 @@ body {
 .login {
   display: flex;
   align-items: center;
+  color: #fe6665;
 }
 .login span {
   padding: 0 10px;
 }
+.login .name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.login .icon-login {
+  font-size: 2em;
+}
 .nav-bar {
   grid-area: left;
   height: 100%;
-
   background: #fe6665;
 }
 .section {
   grid-area: contenido;
   padding: 30px;
 }
-.section .container-section {
+
+.container-movies .movies {
   display: grid;
   grid-template-columns: repeat(4, 300px);
-  grid-template-rows: repeat(2, 180px);
-  height: 100%;
-  grid-gap: 10px 50px;
-  grid-template-areas: "title title title title";
+  grid-template-rows: 200px;
+  grid-gap: 50px;
+  justify-content: space-between;
 }
-.container-section .title {
+
+.container-movies .movies .movie {
+  background: url("../images/pets-movie.jpg");
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 50%;
+  grid-template-areas: "." "container";
 }
-.container-section .item {
-  background: red;
+.container-movies .movies .movie img {
+  width: 100px;
+}
+
+.description {
+  background: rgba(254, 102, 101, 0.8);
+  color: white;
+  grid-area: container;
+  padding: 0 10px;
+}
+.description h1 {
+  font-size: 1em;
+}
+.description p {
+  font-size: 0.8em;
+  margin: 0;
 }
