@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?e2105o");
+  src: url("../fonts/icomoon.eot?e2105o#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?e2105o") format("truetype"),
+    url("../fonts/icomoon.woff?e2105o") format("woff"),
+    url("../fonts/icomoon.svg?e2105o#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-drop_down:before {
+  content: "\e900";
+}
+.icon-user:before {
+  content: "\e901";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  grid-template: 60px 1fr 150px / 90px 1fr;
+  /* grid-gap: 10px; */
+  height: 100vh;
+  grid-template-areas:
+    "header header"
+    "left contenido"
+    "left contenido";
+}
+.header {
+  grid-area: header;
+  height: 60px;
+  background: white;
+  display: flex;
+  padding: 0 2%;
+  justify-content: space-between;
+  box-shadow: 15px -1px 17px 1px #272525;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 60px;
+}
+.logo p {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+}
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-bar input {
+  height: 18px;
+  width: 350px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #615858cc;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+}
+.login span {
+  padding: 0 10px;
+}
+.nav-bar {
+  grid-area: left;
+  height: 100%;
+
+  background: #fe6665;
+}
+.section {
+  grid-area: contenido;
+  padding: 30px;
+}
+.section .container-section {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: repeat(2, 180px);
+  height: 100%;
+  grid-gap: 10px 50px;
+  grid-template-areas: "title title title title";
+}
+.container-section .title {
+}
+.container-section .item {
+  background: red;
+}
