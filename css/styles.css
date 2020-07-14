@@ -1,10 +1,10 @@
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon.eot?e2105o");
-  src: url("../fonts/icomoon.eot?e2105o#iefix") format("embedded-opentype"),
-    url("../fonts/icomoon.ttf?e2105o") format("truetype"),
-    url("../fonts/icomoon.woff?e2105o") format("woff"),
-    url("../fonts/icomoon.svg?e2105o#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?h12oz");
+  src: url("../fonts/icomoon.eot?h12oz#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?h12oz") format("truetype"),
+    url("../fonts/icomoon.woff?h12oz") format("woff"),
+    url("../fonts/icomoon.svg?h12oz#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,16 +26,29 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-drop_down:before {
+.icon-drop-down:before {
   content: "\e900";
 }
 .icon-user:before {
   content: "\e901";
 }
+.icon-home:before {
+  content: "\e902";
+}
+.icon-cog:before {
+  content: "\e994";
+}
+.icon-fire:before {
+  content: "\e9a9";
+}
+.icon-heart:before {
+  content: "\e9da";
+}
 
 body {
   margin: 0;
   padding: 0;
+  font-family: "Baloo Da 2", "san-serif";
 }
 
 .container {
@@ -102,6 +115,31 @@ body {
   grid-area: left;
   height: 100%;
   background: #fe6665;
+  padding: 20px;
+}
+.nav-bar .container-icons {
+  display: grid;
+  height: 100%;
+  color: white;
+  justify-content: center;
+}
+.nav-bar .container-icons span {
+  display: flex;
+  height: 50px;
+  font-size: 2em;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-bar .container-icons p {
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-family: "Baloo Da 2", "san-serif";
+  font-size: 0.8em;
+}
+.nav-bar .container-icons .icon-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .section {
   grid-area: contenido;
